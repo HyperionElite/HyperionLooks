@@ -15,7 +15,7 @@ import math, os, random, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-W, H = 1024, 768                    # static pictures (Roblox draws up to 1024)
+W, H = 800, 600                     # static pictures: 800 x 600 (a 1024 px still cost up to 71 ms of texture upload when it first shows; this is about 40 % less)
 GW, GH, GN, GD = 160, 120, 24, 90   # GIF size, frames, ms per frame
 TW, TH, TCOLS = 192, 120, 3         # thumbnail cell, atlas columns
 
@@ -24,7 +24,7 @@ LOOKS = [
     ("carbon",    "carbon.jpg",    "#111113", "#E8B84A", "#19191C", 0.30),
     ("ember",     "ember.gif",     "#140C0A", "#FF7A3D", "#1E1210", 0.30),
     ("velvet",    "velvet.jpg",    "#14080B", "#E5484D", "#1E0D11", 0.28),
-    ("synthwave", "synthwave.gif", "#120A1A", "#FF4FA3", "#1C1026", 0.32),
+    ("synthwave", "synthwave.gif", "#120A1A", "#FF4FA3", "#1C1026", 0.40),
     ("nebula",    "nebula.jpg",    "#0F0B1A", "#9B6BFF", "#171127", 0.28),
     ("midnight",  "midnight.jpg",  "#0A0F1E", "#4C8DFF", "#111A2E", 0.25),
     ("aurora",    "aurora.gif",    "#08121A", "#5AD1E6", "#0F1D26", 0.30),
